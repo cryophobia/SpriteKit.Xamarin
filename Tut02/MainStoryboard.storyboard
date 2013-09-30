@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1906" systemVersion="11A511" targetRuntime="iOS.CocoaTouch" nextObjectID="6" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="902"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <viewController id="2" customClass="Tut002ViewController" sceneMemberID="viewController">
+                    <connections>
+                        <outlet property="skView" destination="7" id="name-outlet-7"/>
+                    </connections>
+                    <view contentMode="scaleToFill" id="7" key="view" customClass="SKView">
+                        <rect key="frame" x="0.0" y="40" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <resources>
+        <image name="background.png" width="1136" height="320"/>
+        <image name="background@2x.png" width="2272" height="640"/>
+        <image name="MainMenu.png" width="568" height="320"/>
+        <image name="MainMenu@2x.png" width="1136" height="640"/>
+        <image name="YouLose.png" width="568" height="320"/>
+        <image name="YouLose@2x.png" width="1136" height="640"/>
+        <image name="YouWin.png" width="568" height="320"/>
+        <image name="YouWin@2x.png" width="1136" height="640"/>
+        <image name="cat.png" width="37" height="39"/>
+        <image name="cat@2x.png" width="73" height="78"/>
+        <image name="enemy.png" width="58" height="81"/>
+        <image name="enemy@2x.png" width="116" height="161"/>
+        <image name="Player1.png" width="79" height="51"/>
+        <image name="Player1@2x.png" width="157" height="102"/>
+        <image name="Player2.png" width="79" height="51"/>
+        <image name="Player2@2x.png" width="157" height="102"/>
+        <image name="Player3.png" width="79" height="51"/>
+        <image name="Player3@2x.png" width="157" height="102"/>
+        <image name="Player4.png" width="79" height="51"/>
+        <image name="Player4@2x.png" width="157" height="102"/>
+        <image name="Icon-72.png" width="72" height="72"/>
+        <image name="Icon-144.png" width="144" height="144"/>
+        <image name="Icon-Small-50.png" width="50" height="50"/>
+        <image name="Icon-Small-50@2x.png" width="100" height="100"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon-Small@2x.png" width="58" height="58"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="Icon@2x.png" width="114" height="114"/>
+        <image name="iTunesArtwork.png" width="512" height="512"/>
+        <image name="iTunesArtwork@2x.png" width="1024" height="1024"/>
+    </resources>
+</document>

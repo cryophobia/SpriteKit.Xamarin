@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37789232-7953-4CC6-9B89-BFF8CCBFBA3F}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Tut002</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Tut002</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: CJP VAN WYK (3TQLZ49G87)</CodesignKey>
+    <CodesignProvision>87426188-56F4-471C-98ED-1C7B2769F68A</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Tut002ViewController.cs" />
+    <Compile Include="Tut002ViewController.designer.cs">
+      <DependentUpon>Tut002ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MathHelpers.cs" />
+    <Compile Include="EnemySprite.cs" />
+    <Compile Include="PlayerScene.cs" />
+    <Compile Include="PlayerSprite.cs" />
+    <Compile Include="StarSprite.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainStoryboard.storyboard" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\background.png">
+      <Link>Resources\background.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\background%402x.png">
+      <Link>Resources\background%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\Dafault.png">
+      <Link>Resources\Dafault.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\Dafault%402x.png">
+      <Link>Resources\Dafault%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\Default-586h%402x.png">
+      <Link>Resources\Default-586h%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\enemy.png">
+      <Link>Resources\enemy.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\enemy%402x.png">
+      <Link>Resources\enemy%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\icon-large.png">
+      <Link>Resources\icon-large.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\icon-small.png">
+      <Link>Resources\icon-small.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\icon.png">
+      <Link>Resources\icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\itunes-large.png">
+      <Link>Resources\itunes-large.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\itunes.png">
+      <Link>Resources\itunes.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\player1.png">
+      <Link>Resources\player1.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\player1%402x.png">
+      <Link>Resources\player1%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\player2.png">
+      <Link>Resources\player2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\player2%402x.png">
+      <Link>Resources\player2%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\player3.png">
+      <Link>Resources\player3.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\player3%402x.png">
+      <Link>Resources\player3%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\player4.png">
+      <Link>Resources\player4.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\player4%402x.png">
+      <Link>Resources\player4%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\spotlight-large.png">
+      <Link>Resources\spotlight-large.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\spotlight-small.png">
+      <Link>Resources\spotlight-small.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\spotlight.png">
+      <Link>Resources\spotlight.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\star.png">
+      <Link>Resources\star.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Xamarin.SpriteKit\Images\star%402x.png">
+      <Link>Resources\star%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\explosion.wav" />
+    <BundleResource Include="Resources\pop.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+</Project>
