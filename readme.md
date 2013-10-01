@@ -42,7 +42,7 @@ Override the method **ViewWillLayoutSubViews** and add the following code:
 		}
 	}
 
-We could have used the same code in ViewDidLoad, however since the view’s size is not guaranteed to be correct at this point, **ViewWillLayoutSubviews** is a safer.
+We could have used the same code in ViewDidLoad, however since the view’s size is not guaranteed to be correct at this point, **ViewWillLayoutSubviews** is a safer bet.
 
 You may have noticed that instead of making use of an **UIView** in our view controller, we are using **SKView**. Make sure to set this in your Storyboard.
 
